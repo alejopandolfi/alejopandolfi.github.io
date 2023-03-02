@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+
+
 *{
    box-sizing: border-box;
    margin: 0;
@@ -193,7 +195,22 @@ position: relative;
     height: 400px;
     margin-left: -100%;
 }
+
+.slider:before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+
+    
+}
+
 .slider__section {
+    position: relative;
 width: 100%;
 }
 .slider__img {
@@ -204,6 +221,7 @@ object-fit: cover;
 }
 .slider__btn {
 position: absolute;
+z-index: 9999;
 width: 40px;
 height: 40px;
 background: rgba(255, 255, 255, 0.7);
@@ -224,4 +242,49 @@ left: 10px;
 }
 .slider__btn--right {
 right: 10px;
+}
+
+.slider__content{
+   position: absolute; 
+   z-index: 999;
+   top: 80%;
+   left: 50%;
+   color: #fff;
+   transform: translate(-50%, -50%);
+   width: 60%;
+   text-align: center;
+}
+
+.slider__title{
+    font-size: 1.2em;
+    font-family: 'Nunito', cursive;
+    color: #ffbc0e;
+    border: #000;
+    transition: all 1s;
+    cursor: context-menu;
+}
+
+.slider__title:hover{
+    transform: scale(1.1);
+}
+
+.slider--btn{
+   
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    width: 150px;
+    margin: 10px auto;
+    transition: all 1s;
+    
+}
+.slider--btn:hover{
+    border: 1px solid #ffbc0e;
+    color: #ffbc0e;
+    transform: scale(1.1);
+
 }
