@@ -9,13 +9,13 @@
 }
 
 body{
-
-    background-color: rgb(94, 93, 93);
+  
+    background: #464747
 }
 
 .header{
 
-    background-color: rgb(131, 129, 129);
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,6 +69,7 @@ body{
 
 .header .btn button,
 .header .menu button{
+ 
     font-weight: 700;
     color: #1b3039;
     padding: 9px 25px;
@@ -82,6 +83,23 @@ body{
 
 .header .btn button:hover,
 .header .menu button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+.cart button{
+   
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background:#eceff1 ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5 ease 0s;
+}
+
+.cart button:hover{
     background-color: #e2f1f8;
     color: #ffbc0e;
     transform: scale(1.1);
@@ -154,4 +172,56 @@ body{
         top: 15px;
         right: 35px;
     }
+}
+
+/*---- --- ---- SLIDER ---- --- ----*/
+
+.container-slider {
+    
+width: 90%;
+max-width: 900px;
+margin: auto;
+margin-top: 50px;
+overflow: hidden;
+box-shadow: 0 0 0 4px #b3b0b0,
+            0 10px 50px #ffbc0e;
+position: relative;
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 400px;
+    margin-left: -100%;
+}
+.slider__section {
+width: 100%;
+}
+.slider__img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.slider__btn {
+position: absolute;
+width: 40px;
+height: 40px;
+background: rgba(255, 255, 255, 0.7);
+top: 50%;
+transform: translateY(-50%);
+font-size: 30px;
+font-weight: bold;
+font-family: monospace;
+text-align: center;
+border-radius: 50%;
+cursor: pointer;
+}
+.slider__btn:hover {
+ background: #fff;
+}
+.slider__btn--left {
+left: 10px;
+}
+.slider__btn--right {
+right: 10px;
 }
