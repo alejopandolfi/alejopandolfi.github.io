@@ -209,7 +209,7 @@ position: relative;
     margin-left: -100%;
 }
 
-/*.slider:before{
+.slider:before{
     content: "";
     position: absolute;
     z-index: 1;
@@ -220,7 +220,7 @@ position: relative;
     height: 100%;
 
     
-}*/
+}
 
 .slider__section {
     position: relative;
