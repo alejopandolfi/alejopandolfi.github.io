@@ -12,7 +12,7 @@
 
 body{
   
-    background: #464747
+    background: #2c2e2e
 }
 
 .header{
@@ -189,6 +189,9 @@ body{
 .overlay{
     z-index: 12031023915646846059 !important;
 }
+.main{
+    padding: 20px;
+}
 
 /*---- --- ---- SLIDER ---- --- ----*/
 
@@ -196,7 +199,7 @@ body{
 width: 90%;
 max-width: 900px;
 margin: auto;
-margin-top: 100px;
+margin-top: 70px;
 overflow: hidden;
 box-shadow: 0 0 0 4px #b3b0b0,
             0 10px 50px #ffbc0e;
@@ -301,22 +304,108 @@ right: 10px;
     transform: scale(1.1);
 
 }
-/*
-@media handheld, only screen and (max-width: 767px) {
-        .slider__btn {
-        display:none;
-    }
-    }
+/*                                         ESTILOS DE PRODUCTOS                                              */ 
 
-@media handheld, only screen and (max-width: 767px) {
-        .slider__title {
-        display:none;
-    }
-    }
 
-@media handheld, only screen and (max-width: 767px) {
-        .slider--btn {
-        display:none;
-    }
-    }    
+.container-products{
+    
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-left: 20%;
+    margin-top: 50px;
+}
 
+.product{
+    box-shadow: 0 0 0 4px #b3b0b0,
+            0 10px 50px #000000;
+    background-color: #000000;
+    border: 2px solid #272626;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+.product:before{
+    content: "New";
+    background: #000;
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: #ffbc0e;
+}
+
+.product__img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product__title{
+    text-align: center;
+    font-family: 'Nunito', cursive;
+    font-size: 25px;
+}
+
+.product__price{
+    color: #ffbc0e;
+    font-weight: bold;
+}
+
+.product__icon{
+    display: block;
+    margin-top: 10px;
+}
+
+@media all and (max-width: 840px) {
+    .product__img{
+       width: 100%;
+      object-fit: cover;
+      padding: 0px;
+    }
+}
+
+@media all and (max-width: 840px) {
+    .container-products{
+      width: 99%;
+      padding: 0px;
+      margin-left: 1px;
+      height: 150px;
+    }
+}
+
+.moufer_final{
+   margin: 10px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'IBM Plex Serif', serif;
+    color: #fff;
+    box-shadow: 0 0 0 4px #b3b0b0,
+    0 10px 50px #000000;
+    background-color: #2c2e2e;
+    border: 1px solid #ffbc0e;
+    transition: all 1.5s;
+}
+
+.moufer_final:hover{
+    display: block;
+    color: #ffbc0e;
+    border: solid 1px #fff;
+    background-color: #000;
+   transform: scale(.9);
+   box-shadow: 0 0 0 4px #fff,
+   0 7px 20px #ffbc0e;
+}
+
+@media all and (max-width: 840px) {
+    .moufer_final{
+        margin-top: 21em;
+    }
+}
